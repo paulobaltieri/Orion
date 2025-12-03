@@ -1,11 +1,11 @@
+import Appbar from "./components/Appbar/Appbar"
 import AppRoutes from "./Routes/AppRoutes"
-import Appbar from "./pages/Home/Home"
+
 
 function App() {
   return (
     <>
-      { /* Rotas das páginas */}
-      <Appbar />
+      <Appbar/>
       <AppRoutes />
     </>
 
