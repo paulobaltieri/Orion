@@ -1,14 +1,26 @@
 import { Box, CardMedia, Typography } from "@mui/material";
 import videoHome from "../../assets/Video/videoHome.mp4";
 import Button from "@mui/material/Button";
+<<<<<<< HEAD
 import { Flex } from "antd";
 
 function Home() {
+=======
+
+function Home() {
+    // Texto presente na frente dos video
+    const titleVideo = "Bem vindo!"
+    const subtitleVideo = "Jiu-Jitsu Eventos — Os melhores campeonatos"
+>>>>>>> main
     return (
         <Box
             sx={{
                 width: "100vw",
+<<<<<<< HEAD
                 height: "100vh",
+=======
+                height: "90vh",
+>>>>>>> main
                 position: "relative",
                 overflow: "hidden",
             }}
@@ -49,6 +61,7 @@ function Home() {
                 }}
             >
                 <Typography variant="h2" fontWeight="bold">
+<<<<<<< HEAD
                     Bem-vindo!
                 </Typography>
 
@@ -58,6 +71,19 @@ function Home() {
                 <Box sx={{ display: "flex", gap: 3 }}>
                     <Button variant="contained">Contained</Button>
                     <Button variant="contained">Contained</Button>
+=======
+                    {titleVideo}
+                </Typography>
+
+                <Typography variant="h5" mt={2} mb={3}>
+                    {subtitleVideo}
+                </Typography>
+                <Box sx={{ display: "flex", gap: 3 }}>
+                    <Button variant="contained" color="error">Proximos eventos</Button>
+                    <Button variant="contained"
+                        sx={{ backgroundColor: "#212121", border: "none", "&:focus": { outline: "nome" } }}
+                    >Divulgue seu evento</Button>
+>>>>>>> main
                 </Box>
             </Box>
         </Box>

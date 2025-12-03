@@ -7,9 +7,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Appbar() {
+    const titleNavbar = " Jiu-Jitsu Eventos"
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="fixed">
+            <AppBar position="fixed"
+                sx={{ backgroundColor: "#212121" }}
+            >
                 <Toolbar>
 
                     {/* Menu hambúrguer — aparece apenas no mobile */}
@@ -24,17 +27,21 @@ export default function Appbar() {
 
                     {/* Título */}
                     <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                        Jiu-Jitsu Eventos
+                        {titleNavbar}
                     </Typography>
 
                     {/* Botões — aparecem apenas no desktop */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
-                        <Button color="inherit">Button</Button>
-                        <Button color="inherit">Button</Button>
-                        <Button color="inherit">Button</Button>
-                        <Button color="inherit">Button</Button>
-                        <Button color="inherit">Button</Button>
-                        <Button color="inherit">Button</Button>
+                        <Button color="inherit">Inicio</Button>
+                        <Button color="inherit">Competições</Button>
+                        <Button color="inherit">Seminários</Button>
+                        <Button color="inherit">cursos</Button>
+                        <Button variant="contained" color="error"
+                            sx={{ borderRadius: 10 }}
+                        >Criar conta</Button>
+                        <Button variant="contained" color="error"
+                            sx={{ borderRadius: 10 }}
+                        >Login</Button>
                     </Box>
 
                 </Toolbar>
