@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import Select, { type SelectChangeEvent } from "@mui/material/Select";
 import { useState } from "react";
 import CardEventos from "../../components/CardEventos/CardEventos";
+import CardDestaque from "../../components/CardEventosDestaque/CardEventosDestaque";
 
 function Home() {
     const [estado, setEstado] = useState("")
@@ -18,10 +19,11 @@ function Home() {
 
 
     // Texto presente na frente dos video
+
     const titleVideo = "Encontre todas as "
     const titleVideo2 = "Competições de Jiu-Jitsu em um só lugar"
     const subtitleVideo = "Jiu-Jitsu Eventos — Os melhores campeonatos"
-    
+
     return (
         <>
             <Box
@@ -33,6 +35,7 @@ function Home() {
                 }}
             >
                 {/* Vídeo ocupando a tela */}
+
                 <CardMedia
                     component="video"
                     src={videoHome}
@@ -51,6 +54,7 @@ function Home() {
                 />
 
                 {/* Texto e botão na frente */}
+
                 <Box
                     sx={{
                         position: "absolute",
@@ -65,7 +69,6 @@ function Home() {
                         color: "#fff",
                         textShadow: "2px 2px 10px rgba(0,0,0,0.8)",
                         margin: "5px"
-                        // pointerEvents: "none",  <-- REMOVIDO
                     }}
                 >
                     <Typography variant="h3" fontWeight="bold">
@@ -86,13 +89,14 @@ function Home() {
                 </Box>
             </Box>
             <Typography variant="h3" sx={{
-                backgroundColor: "red",
+                backgroundColor: "#d22f2f",
                 padding: 2,
                 textAlign: "center"
             }}>Próximas Competições</Typography>
 
 
             {/* Parte responsavel pelo select dos estados e cidade*/}
+
             <Box
                 sx={{
                     display: "flex",
@@ -106,6 +110,7 @@ function Home() {
                 }}
             >
                 {/* Select responsavel pelos estados */}
+
                 <FormControl size="small">
                     <InputLabel sx={{ color: "#d1ced5ff" }}><em>Estado</em></InputLabel>
                     <Select
@@ -145,6 +150,28 @@ function Home() {
                 </FormControl>
             </Box>
             <CardEventos />
+
+            {/* Eventos em Destaque*/}
+
+            <Box sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: 10,
+                marginBottom: 5,
+                fontSize: "40px",
+            }}>
+                Eventos em Destaque
+            </Box>
+            <Box>
+                <CardDestaque />
+            </Box>
+            <Box sx={{ margin: "auto", textAlign: "center", fontSize: 40, marginBottom: 5 }}>
+                Seminario
+                <Typography variant="h6" sx={{ marginTop: 2, fontSize: 20, }}>
+                    Nenhum seminario encontrado!
+                </Typography>
+            </Box>
         </>
     );
 }
